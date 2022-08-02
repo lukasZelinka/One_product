@@ -1,0 +1,14 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gridContainer {
+    display: grid;
+    grid-template-columns: 240px 240px 240px;
+    // background-color: red;
+    width: 780px;
+    margin: 0 auto;
+    gap: 0px 30px;
+}

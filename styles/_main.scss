@@ -1,0 +1,213 @@
+main {
+    .grid-container-squares  {
+       @include gridContainer();
+        margin-top: -60px;
+
+        .grid-item {
+            // background-color: blue;
+            .square {
+                position: relative;
+                width: 240px;
+                height: 240px;
+                border-radius: 12px;
+                // background-color: green;
+                margin: 0;
+                .inner-square {
+                    background-color: #000000;
+                    position: absolute;
+                    top: 26px;
+                    right: 26px;
+                    bottom: 14px;
+                    left: 14px;
+                    opacity: 0.1;
+                    border-radius: 12px;
+                    padding-bottom: 34px;
+                    padding-left: 34px;
+                    transition-property: top,right;
+                    transition-duration: 0.3s;
+                    transition-timing-function: linear;
+                }
+                .text {
+                    position: absolute;
+                    bottom: 34px;
+                    left: 34px;
+                    font: bold 80px/80px Arial, sans-serif;
+                    color: #ffffff;
+                    transition-property: bottom,left;
+                    transition-duration: 0.3s;
+                    transition-timing-function: linear;
+                }
+            }
+            .square:hover .text {
+            bottom: 46px;
+            left: 46px;
+            }
+            .square:hover .inner-square {
+            top: 14px;
+            right: 14px;
+            }
+            
+        }
+    }
+    .grid-container-squares  a:nth-child(1) .square {
+        background-color: $s1;
+    }
+    .grid-container-squares  a:nth-child(2) .square {
+        background-color: $s2;
+    }
+    .grid-container-squares  a:nth-child(3) .square {
+        background-color: $s3;
+    }
+    #WE-content{
+       margin: 90px 30px 30px 30px;
+       height: 100vh;
+       border: solid 2px #ffffff;
+       border-radius: 12px;
+       #WE-grid-container {
+        @include gridContainer(); 
+        #WE-title-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 99.5vh;
+            #WE-title {
+                font:  36px/41px Arial, sans-serif;
+                color: #787889;
+                span {
+                   font-weight: bold;
+                   color: white
+                }
+            }
+            #WE-subtitle {
+                margin-top:28px ;
+                font: 18px/24px Arial, sans-serif;
+                color: #C7C8CE;
+            }
+        }
+        #big-line-wrapper {
+            grid-column: 2 / 4;
+            display: flex;
+            align-items: center;
+            height: 99.5vh;
+            // background-color: #cacaca;
+            .big-line-first{
+                height: 18px;
+                border-radius: 4px;
+                background-color: #3C3F54;
+                width: 100%;
+                transition: $transition;
+            }
+            .active-line-first {
+            background-color: $s1;
+            }
+        }
+       }
+    } 
+     #BJ-content {
+            margin: 30px 30px 30px 30px;
+            height: 100vh;
+            border: solid 2px #ffffff;
+            border-radius: 12px;
+    
+            #BJ-grid-container {
+                @include gridContainer();
+    
+                #BJ-title-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 99.5vh;
+    
+                    #BJ-title {
+                        font: 36px/41px Arial, sans-serif;
+                        color: #787889;
+    
+                        span {
+                            font-weight: bold;
+                            color: white
+                        }
+                    }
+    
+                    #BJ-subtitle {
+                        margin-top: 28px;
+                        font: 18px/24px Arial, sans-serif;
+                        color: #C7C8CE;
+                    }
+                }
+    
+                #big-line-wrapper-second {
+                    // grid-column: 2 / 4;
+                    display: flex;
+                    align-items: center;
+                    height: 99.5vh;
+    
+                    // background-color: #cacaca;
+                    .big-line-second {
+                        height: 18px;
+                        border-radius: 4px;
+                        background-color: #3C3F54;
+                        width: 100%;
+                        transition: $transition;
+                    }
+    
+                    .active-line-second {
+                        background-color: $s2;
+                    }
+                }
+            }
+    }
+        #ET-content {
+            margin: 30px 30px 30px 30px;
+            height: 100vh;
+            border: solid 2px #ffffff;
+            border-radius: 12px;
+    
+            #ET-grid-container {
+                @include gridContainer();
+    
+                #ET-title-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 99.5vh;
+    
+                    #ET-title {
+                        font: 36px/41px Arial, sans-serif;
+                        color: #787889;
+    
+                        span {
+                            font-weight: bold;
+                            color: white
+                        }
+                    }
+    
+                    #ET-subtitle {
+                        margin-top: 28px;
+                        font: 18px/24px Arial, sans-serif;
+                        color: #C7C8CE;
+                    }
+                }
+    
+                #big-line-wrapper-third {
+                    grid-column: 1 / 3;
+                    display: flex;
+                    align-items: center;
+                    height: 99.5vh;
+    
+                    // background-color: #cacaca;
+                    .big-line-third {
+                        height: 18px;
+                        border-radius: 4px;
+                        background-color: #3C3F54;
+                        width: 100%;
+                        transition: $transition;
+                    }
+    
+                    .active-line-third {
+                        background-color: $s3;
+                    }
+                }
+            }
+        }
+
+}

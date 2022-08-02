@@ -1,0 +1,64 @@
+header {
+    height: 100vh;
+    // margin-top: 30px;
+
+    #box {
+        height: 100vh;
+        margin: 30px;
+        border-radius: 12px;
+        background-color: white;
+        @include flexCenter();
+        
+
+        #title {
+            width: 780px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #20253C;
+            font: bold 46px/54px Arial, sans-serif;
+        }
+
+        #subtitle {
+            width: 780px;
+            text-align: center;
+            color: $grey ;
+            font: 36px/42px Arial, sans-serif;
+            margin-top: 30px;
+        }
+
+        #caret-down-icon-wrapper {
+            text-align: center;
+            margin-top: 30px;
+            color: $grey;
+            position: relative;
+        }
+
+        .arrow-animation {
+            animation: arrow 1.5s linear infinite forwards;
+        }
+
+        @keyframes arrow {
+            0% {
+                top: 0px;
+            }
+
+            25% {
+                top: -5px;
+            }
+
+            50% {
+                top: 0px;
+            }
+
+            75% {
+                top: 5px;
+            }
+
+            100% {
+                top: 0px;
+            }
+        }
+
+
+    }
+}
